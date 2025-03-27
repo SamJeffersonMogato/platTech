@@ -1,0 +1,173 @@
+/* General Styling */
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    min-height: 100vh;
+    animation: fadeIn 1s ease-in-out;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Header & Banner */
+header {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background: #f8f8f8;
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #ddd;
+}
+
+/* Main Layout */
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 20px;
+}
+
+/* Left Side: Input & History */
+.sidebar {
+    width: 30%;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+/* Input */
+input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    background: white;
+    color: black;
+}
+
+input:focus {
+    border-color: #bbb;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons */
+button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    background: #e0e0e0;
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #d0d0d0;
+    transform: translateY(-2px);
+}
+
+/* Location History */
+#locationsList {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+#locationsList li {
+    display: flex;
+    align-items: center;
+    background: #f2f2f2;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#locationsList li img {
+    width: 25px;
+    height: 18px;
+    margin-right: 10px;
+    border-radius: 3px;
+}
+
+/* Map */
+#map {
+    width: 70%;
+    height: 500px;
+    margin-left: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border: 3px solid #ddd;
+    transition: all 0.3s ease-in-out;
+}
+
+#map:hover {
+    transform: scale(1.02);
+    border-color: #bbb;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background: #222;
+    color: white;
+}
+
+.dark-mode .sidebar {
+    background: #333;
+    color: white;
+}
+
+.dark-mode input {
+    background: #444;
+    color: white;
+    border-color: #666;
+}
+
+.dark-mode input:focus {
+    border-color: #888;
+}
+
+.dark-mode button {
+    background: #555;
+    color: white;
+}
+
+.dark-mode #locationsList li {
+    background: #444;
+    color: white;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar, #map {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
